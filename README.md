@@ -140,40 +140,404 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>Hello</b></font> world
+</pre>
 
 
 grep hello newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>hello</b></font> world
+</pre>
 
 
 
 grep -v hello newfile 
 ## OUTPUT
+Hello world
 
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-
+<pre>Hello world
+<font color="#C01C28"><b>hello</b></font> world
+</pre>
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
+1
 
 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-
+<pre><font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-email</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-email</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-email</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-feed-readers</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-feed-readers</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-feed-readers</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-feed-readers.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-bittorrent-clients</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-bittorrent-clients</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-bittorrent-clients</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-bittorrent-clients.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-xterm</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-xterm.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/gvfs-open</font><font color="#2AA1B3">:</font>#   # needed for <font color="#C01C28"><b>ubuntu</b></font>-* abstractions
+<font color="#A347BA">/etc/apparmor.d/abstractions/gvfs-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/gvfs-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/gvfs-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/productivity</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/productivity</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-gnome-terminal&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-media-players&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-bittorrent-clients&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-feed-readers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/plugins-common</font><font color="#2AA1B3">:</font>  # Since all the <font color="#C01C28"><b>ubuntu</b></font>-browsers.d abstractions need this, just include it
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/plugins-common</font><font color="#2AA1B3">:</font>  include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/plugins-common&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/mailto&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/multimedia&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/productivity&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/java&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/kde&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/text-editors&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/<font color="#C01C28"><b>ubuntu</b></font>-integration&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/chromium-browser</font><font color="#2AA1B3">:</font>include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers.d/user-files&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/text-editors</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/text-editors</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration</font><font color="#2AA1B3">:</font>  # K<font color="#C01C28"><b>ubuntu</b></font>
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/kde</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-browsers.d/kde</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-konsole</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-konsole.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-unity7-base</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-unity7-base.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/gio-open</font><font color="#2AA1B3">:</font>#   # needed for <font color="#C01C28"><b>ubuntu</b></font>-* abstractions
+<font color="#A347BA">/etc/apparmor.d/abstractions/gio-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/gio-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/gio-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-unity7-launcher</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-unity7-launcher.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-unity7-messaging</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-unity7-messaging.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-browsers</font><font color="#2AA1B3">:</font># include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-gnome-terminal&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-browsers</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-browsers</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-browsers</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-browsers.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-media-players</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-media-players</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-media-players</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-media-players.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-gnome-terminal</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-gnome-terminal.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/evince</font><font color="#2AA1B3">:</font>  # L<font color="#C01C28"><b>ubuntu</b></font>
+<font color="#A347BA">/etc/apparmor.d/abstractions/evince</font><font color="#2AA1B3">:</font>  /etc/xdg/l<font color="#C01C28"><b>ubuntu</b></font>/applications/defaults.list r,
+<font color="#A347BA">/etc/apparmor.d/abstractions/exo-open</font><font color="#2AA1B3">:</font>#   # needed for <font color="#C01C28"><b>ubuntu</b></font>-* abstractions
+<font color="#A347BA">/etc/apparmor.d/abstractions/exo-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/exo-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/exo-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/exo-open</font><font color="#2AA1B3">:</font>  /usr/share/{xfce{,4},x<font color="#C01C28"><b>ubuntu</b></font>}/applications/{,*.list} r,
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-email</font><font color="#2AA1B3">:</font># include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-gnome-terminal&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-email</font><font color="#2AA1B3">:</font># Users of this abstraction need to include the <font color="#C01C28"><b>ubuntu</b></font>-helpers abstraction
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-email</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/ubuntu-console-email</font><font color="#2AA1B3">:</font>  include if exists &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-email.d&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/xdg-open</font><font color="#2AA1B3">:</font>#   # needed for <font color="#C01C28"><b>ubuntu</b></font>-* abstractions
+<font color="#A347BA">/etc/apparmor.d/abstractions/xdg-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/xdg-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/xdg-open</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/kde</font><font color="#2AA1B3">:</font>/usr/share/k<font color="#C01C28"><b>ubuntu</b></font>-default-settings/kf5-settings/* r,
+<font color="#A347BA">/etc/apparmor.d/abstractions/kde-open5</font><font color="#2AA1B3">:</font>#   # needed for <font color="#C01C28"><b>ubuntu</b></font>-* abstractions
+<font color="#A347BA">/etc/apparmor.d/abstractions/kde-open5</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-helpers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/kde-open5</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/kde-open5</font><font color="#2AA1B3">:</font>#   include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/abstractions/kde-open5</font><font color="#2AA1B3">:</font>  # see: https://lists.<font color="#C01C28"><b>ubuntu</b></font>.com/archives/apparmor/2019-January/011925.html
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-email&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-media-players&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-gnome-terminal&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  ##include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-xterm&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  ##include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-konsole&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  # For X<font color="#C01C28"><b>ubuntu</b></font> to launch the browser
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-browsers&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-email&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-console-email&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-media-players&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  #include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-gnome-terminal&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.bin.evince</font><font color="#2AA1B3">:</font>  ##include &lt;abstractions/<font color="#C01C28"><b>ubuntu</b></font>-xterm&gt;
+<font color="#A347BA">/etc/apparmor.d/usr.sbin.cupsd</font><font color="#2AA1B3">:</font># Author: Martin Pitt &lt;martin.pitt@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+grep: /etc/shadow-: Permission denied
+<font color="#A347BA">/etc/rc1.d/K01whoopsie</font><font color="#2AA1B3">:</font>DAEMON=/bin/sh -c &apos;export CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com; exec whoopsie -f&apos;
+grep: /etc/ppp/chap-secrets: Permission denied
+grep: /etc/ppp/pap-secrets: Permission denied
+<font color="#A347BA">/etc/speech-dispatcher/speechd.conf</font><font color="#2AA1B3">:</font># Copyright (C) 2014-2016 Luke Yelavich &lt;themuso@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+<font color="#A347BA">/etc/speech-dispatcher/modules/espeak-ng-mbrola-generic.conf</font><font color="#2AA1B3">:</font># Copyright (C) 2014 Luke Yelavich &lt;themuso@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+<font color="#A347BA">/etc/speech-dispatcher/modules/espeak-mbrola-generic.conf</font><font color="#2AA1B3">:</font># Copyright (C) 2014 Luke Yelavich &lt;themuso@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+grep: /etc/ssl/private: Permission denied
+<font color="#A347BA">/etc/grub.d/10_linux</font><font color="#2AA1B3">:</font><font color="#C01C28"><b>ubuntu</b></font>_recovery=&quot;1&quot;
+<font color="#A347BA">/etc/grub.d/10_linux</font><font color="#2AA1B3">:</font>    Ubuntu|K<font color="#C01C28"><b>ubuntu</b></font>)
+<font color="#A347BA">/etc/grub.d/10_linux</font><font color="#2AA1B3">:</font>if [ &quot;$<font color="#C01C28"><b>ubuntu</b></font>_recovery&quot; = 1 ]; then
+<font color="#A347BA">/etc/grub.d/10_linux</font><font color="#2AA1B3">:</font>  if ([ &quot;$<font color="#C01C28"><b>ubuntu</b></font>_recovery&quot; = 0 ] || [ x$type != xrecovery ]) &amp;&amp; \
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font><font color="#C01C28"><b>ubuntu</b></font>_recovery=&quot;1&quot;
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>        # on <font color="#C01C28"><b>ubuntu</b></font>, loaded by the shim.
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>    last_booted_kernel=$(zfs get -H com.<font color="#C01C28"><b>ubuntu</b></font>.zsys:last-booted-kernel &quot;${dataset}&quot; | awk -v FS=&apos;\t&apos; &apos;{print $3}&apos;)
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>            last_used=$(zfs get -H com.<font color="#C01C28"><b>ubuntu</b></font>.zsys:last-used &quot;${dataset}&quot; | awk &apos;{print $3}&apos;)
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>    is_zsys=$(zfs get -H com.<font color="#C01C28"><b>ubuntu</b></font>.zsys:bootfs &quot;${base_dataset}&quot; | awk &apos;{print $3}&apos;)
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>    if ([ &quot;${<font color="#C01C28"><b>ubuntu</b></font>_recovery}&quot; = 0 ] || [ &quot;${type}&quot; != &quot;recovery&quot; ]) &amp;&amp; \
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>            Ubuntu|K<font color="#C01C28"><b>ubuntu</b></font>)
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>    if [ &quot;${<font color="#C01C28"><b>ubuntu</b></font>_recovery}&quot; = 1 ]; then
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>	# $1: root dataset (eg rpool/ROOT/<font color="#C01C28"><b>ubuntu</b></font>_2zhm07@autozsys_k56fr6)
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>	# $3: initrd (eg /BOOT/<font color="#C01C28"><b>ubuntu</b></font>_2zhm07@autozsys_k56fr6/initrd.img-5.4.0-21-generic)
+<font color="#A347BA">/etc/grub.d/10_linux_zfs</font><font color="#2AA1B3">:</font>	# $4: kernel (eg /BOOT/<font color="#C01C28"><b>ubuntu</b></font>_2zhm07@autozsys_k56fr6/vmlinuz-5.4.0-21-generic)
+<font color="#A347BA">/etc/grub.d/05_debian_theme</font><font color="#2AA1B3">:</font>		Tanglu|Ubuntu|K<font color="#C01C28"><b>ubuntu</b></font>)
+<font color="#A347BA">/etc/grub.d/05_debian_theme</font><font color="#2AA1B3">:</font>	Ubuntu|K<font color="#C01C28"><b>ubuntu</b></font>)
+grep: /etc/gshadow: Permission denied
+<font color="#A347BA">/etc/init.d/whoopsie</font><font color="#2AA1B3">:</font>DAEMON=/bin/sh -c &apos;export CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com; exec whoopsie -f&apos;
+<font color="#A347BA">/etc/init.d/apparmor</font><font color="#2AA1B3">:</font>#  Kees Cook &lt;kees@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+<font color="#A347BA">/etc/init.d/acpid</font><font color="#2AA1B3">:</font>        MODULES=&quot;$(sed -rn &apos;s#^(/lib/modules/[^/]+/)?kernel/(drivers|<font color="#C01C28"><b>ubuntu</b></font>)/acpi/([^/]+/)*(.*)\.ko:.*#\4#p&apos; &quot;/lib/modules/$(uname -r)/modules.dep&quot;)&quot;
+<font color="#A347BA">/etc/rcS.d/S01apparmor</font><font color="#2AA1B3">:</font>#  Kees Cook &lt;kees@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+<font color="#A347BA">/etc/rc2.d/S01acpid</font><font color="#2AA1B3">:</font>        MODULES=&quot;$(sed -rn &apos;s#^(/lib/modules/[^/]+/)?kernel/(drivers|<font color="#C01C28"><b>ubuntu</b></font>)/acpi/([^/]+/)*(.*)\.ko:.*#\4#p&apos; &quot;/lib/modules/$(uname -r)/modules.dep&quot;)&quot;
+<font color="#A347BA">/etc/rc2.d/S01whoopsie</font><font color="#2AA1B3">:</font>DAEMON=/bin/sh -c &apos;export CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com; exec whoopsie -f&apos;
+<font color="#A347BA">/etc/init/whoopsie.conf</font><font color="#2AA1B3">:</font>env CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>default = &apos;<font color="#C01C28"><b>ubuntu</b></font>&apos;
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>        dcd = open(&apos;/var/lib/<font color="#C01C28"><b>ubuntu</b></font>_dist_channel&apos;).read()
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>    &apos;<font color="#C01C28"><b>ubuntu</b></font>&apos;: {
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>        &apos;bug_pattern_url&apos;: &apos;http://people.canonical.com/~<font color="#C01C28"><b>ubuntu</b></font>-archive/bugpatterns/bugpatterns.xml&apos;,
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>        &apos;dupdb_url&apos;: &apos;http://people.canonical.com/~<font color="#C01C28"><b>ubuntu</b></font>-archive/apport-duplicates&apos;,
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>        &apos;distro&apos;: &apos;<font color="#C01C28"><b>ubuntu</b></font>&apos;,
+<font color="#A347BA">/etc/apport/crashdb.conf</font><font color="#2AA1B3">:</font>        &apos;bug_pattern_url&apos;: &apos;http://people.canonical.com/~<font color="#C01C28"><b>ubuntu</b></font>-archive/bugpatterns/bugpatterns.xml&apos;,
+<font color="#A347BA">/etc/apport/native-origins.d/thunderbird</font><font color="#2AA1B3">:</font>LP-PPA-<font color="#C01C28"><b>ubuntu</b></font>-mozilla-daily
+<font color="#A347BA">/etc/apport/native-origins.d/thunderbird</font><font color="#2AA1B3">:</font>LP-PPA-<font color="#C01C28"><b>ubuntu</b></font>-mozilla-daily-thunderbird-aurora
+grep: /etc/security/opasswd: Permission denied
+grep: /etc/sudoers: Permission denied
+<font color="#A347BA">/etc/u-d-c-nvidia-runtimepm-override</font><font color="#2AA1B3">:</font># File created by <font color="#C01C28"><b>ubuntu</b></font>-drivers
+<font color="#A347BA">/etc/rc3.d/S01acpid</font><font color="#2AA1B3">:</font>        MODULES=&quot;$(sed -rn &apos;s#^(/lib/modules/[^/]+/)?kernel/(drivers|<font color="#C01C28"><b>ubuntu</b></font>)/acpi/([^/]+/)*(.*)\.ko:.*#\4#p&apos; &quot;/lib/modules/$(uname -r)/modules.dep&quot;)&quot;
+<font color="#A347BA">/etc/rc3.d/S01whoopsie</font><font color="#2AA1B3">:</font>DAEMON=/bin/sh -c &apos;export CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com; exec whoopsie -f&apos;
+<font color="#A347BA">/etc/bash_completion.d/apport_completion</font><font color="#2AA1B3">:</font># apport-bug <font color="#C01C28"><b>ubuntu</b></font>-bug completion
+<font color="#A347BA">/etc/bash_completion.d/apport_completion</font><font color="#2AA1B3">:</font>    <font color="#C01C28"><b>ubuntu</b></font>-bug | apport-bug)
+<font color="#A347BA">/etc/bash_completion.d/apport_completion</font><font color="#2AA1B3">:</font>complete -F _apport-bug -o filenames -o dirnames <font color="#C01C28"><b>ubuntu</b></font>-bug
+<font color="#A347BA">/etc/PackageKit/Vendor.conf</font><font color="#2AA1B3">:</font>DefaultUrl=https://help.<font color="#C01C28"><b>ubuntu</b></font>.com/community/Repositories/
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>                &lt;allow own=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>		&lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>		       send_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>		&lt;allow receive_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>   		       receive_sender=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>		&lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.LanguageSelector.conf</font><font color="#2AA1B3">:</font>		&lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.LanguageSelector&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntukylin.softwarecenter.conf</font><font color="#2AA1B3">:</font>        &lt;allow own=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>kylin.softwarecenter&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntukylin.softwarecenter.conf</font><font color="#2AA1B3">:</font>        &lt;allow send_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>kylin.softwarecenter&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntukylin.softwarecenter.conf</font><font color="#2AA1B3">:</font>        &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>kylin.softwarecenter&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntukylin.softwarecenter.conf</font><font color="#2AA1B3">:</font>           send_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>kylin.softwarecenter&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntukylin.softwarecenter.conf</font><font color="#2AA1B3">:</font>        &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>kylin.softwarecenter&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntukylin.softwarecenter.conf</font><font color="#2AA1B3">:</font>        &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>kylin.softwarecenter&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.WhoopsiePreferences.conf</font><font color="#2AA1B3">:</font>    &lt;allow own=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.WhoopsiePreferences&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.WhoopsiePreferences.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.WhoopsiePreferences&quot; 
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.WhoopsiePreferences.conf</font><font color="#2AA1B3">:</font>           send_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.WhoopsiePreferences&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.WhoopsiePreferences.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.WhoopsiePreferences&quot; 
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.WhoopsiePreferences.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.WhoopsiePreferences&quot; 
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.SoftwareProperties.conf</font><font color="#2AA1B3">:</font>    &lt;allow own=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.SoftwareProperties&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.SoftwareProperties.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.SoftwareProperties&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.SoftwareProperties.conf</font><font color="#2AA1B3">:</font>           send_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.SoftwareProperties&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.SoftwareProperties.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.SoftwareProperties&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.SoftwareProperties.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.DeviceDriver&quot;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.USBCreator.conf</font><font color="#2AA1B3">:</font>    &lt;allow own=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.USBCreator&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.USBCreator.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.USBCreator&quot; 
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.USBCreator.conf</font><font color="#2AA1B3">:</font>           send_interface=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.USBCreator&quot;/&gt;
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.USBCreator.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.USBCreator&quot; 
+<font color="#A347BA">/etc/dbus-1/system.d/com.ubuntu.USBCreator.conf</font><font color="#2AA1B3">:</font>    &lt;allow send_destination=&quot;com.<font color="#C01C28"><b>ubuntu</b></font>.USBCreator&quot; 
+<font color="#A347BA">/etc/rc4.d/S01acpid</font><font color="#2AA1B3">:</font>        MODULES=&quot;$(sed -rn &apos;s#^(/lib/modules/[^/]+/)?kernel/(drivers|<font color="#C01C28"><b>ubuntu</b></font>)/acpi/([^/]+/)*(.*)\.ko:.*#\4#p&apos; &quot;/lib/modules/$(uname -r)/modules.dep&quot;)&quot;
+<font color="#A347BA">/etc/rc4.d/S01whoopsie</font><font color="#2AA1B3">:</font>DAEMON=/bin/sh -c &apos;export CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com; exec whoopsie -f&apos;
+<font color="#A347BA">/etc/xdg/autostart/ubuntu-advantage-notification.desktop</font><font color="#2AA1B3">:</font>Exec=/usr/lib/update-notifier/<font color="#C01C28"><b>ubuntu</b></font>-advantage-notification
+<font color="#A347BA">/etc/xdg/autostart/ubuntu-report-on-upgrade.desktop</font><font color="#2AA1B3">:</font>Exec=/usr/bin/<font color="#C01C28"><b>ubuntu</b></font>-report send upgrade
+<font color="#A347BA">/etc/xdg/systemd/user/default.target.wants/ubuntu-report.path</font><font color="#2AA1B3">:</font>PathExists=%h/.cache/<font color="#C01C28"><b>ubuntu</b></font>-report/pending
+grep: /etc/apt/trusted.gpg.d/ubuntu-keyring-2012-cdimage.gpg: binary file matches
+grep: /etc/apt/trusted.gpg.d/ubuntu-keyring-2018-archive.gpg: binary file matches
+grep: /etc/apt/trusted.gpg.d/ubuntukylin-archive-keyring.gpg: binary file matches
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># See http://help.<font color="#C01C28"><b>ubuntu</b></font>.com/community/UpgradeNotes for how to upgrade to
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font>deb http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy main restricted
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy main restricted
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-updates main restricted
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font>deb http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy universe
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy universe
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-updates universe
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font>deb http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy multiverse
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy multiverse
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-updates multiverse
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-backports main restricted universe multiverse
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font>deb http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security main restricted
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security main restricted
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font>deb http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security universe
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security universe
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font>deb http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security multiverse
+<font color="#A347BA">/etc/apt/sources.list</font><font color="#2AA1B3">:</font># deb-src http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security multiverse
+<font color="#A347BA">/etc/apt/apt.conf.d/20apt-esm-hook.conf</font><font color="#2AA1B3">:</font>	&quot;[ ! -f /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/apt-esm-json-hook ] || /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/apt-esm-json-hook || true&quot;;
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># See http://help.<font color="#C01C28"><b>ubuntu</b></font>.com/community/UpgradeNotes for how to upgrade to
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font>deb http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy main restricted
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy main restricted
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-updates main restricted
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font>deb http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy universe
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy universe
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-updates universe
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font>deb http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy multiverse
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy multiverse
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-updates multiverse
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://in.archive.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font>/ jammy-backports main restricted universe multiverse
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font>deb http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security main restricted
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security main restricted
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font>deb http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security universe
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security universe
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font>deb http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security multiverse
+<font color="#A347BA">/etc/apt/sources.list.save</font><font color="#2AA1B3">:</font># deb-src http://security.<font color="#C01C28"><b>ubuntu</b></font>.com/<font color="#C01C28"><b>ubuntu</b></font> jammy-security multiverse
+<font color="#A347BA">/etc/update-motd.d/91-contract-ua-esm-status</font><font color="#2AA1B3">:</font>contract_status_stamp=&quot;/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/messages/motd-contract-status&quot;
+<font color="#A347BA">/etc/update-motd.d/91-contract-ua-esm-status</font><font color="#2AA1B3">:</font>auto_attach_stamp=&quot;/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/messages/motd-auto-attach-status&quot;
+<font color="#A347BA">/etc/update-motd.d/91-release-upgrade</font><font color="#2AA1B3">:</font>if [ -x /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-release-upgrader/release-upgrade-motd ]; then
+<font color="#A347BA">/etc/update-motd.d/91-release-upgrade</font><font color="#2AA1B3">:</font>    exec /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-release-upgrader/release-upgrade-motd
+<font color="#A347BA">/etc/update-motd.d/10-help-text</font><font color="#2AA1B3">:</font>printf &quot; * Documentation:  https://help.<font color="#C01C28"><b>ubuntu</b></font>.com\n&quot;
+<font color="#A347BA">/etc/update-motd.d/10-help-text</font><font color="#2AA1B3">:</font>printf &quot; * Support:        https://<font color="#C01C28"><b>ubuntu</b></font>.com/advantage\n&quot;
+<font color="#A347BA">/etc/update-motd.d/50-motd-news</font><font color="#2AA1B3">:</font>[ -n &quot;$URLS&quot; ] || URLS=&quot;https://motd.<font color="#C01C28"><b>ubuntu</b></font>.com&quot;
+<font color="#A347BA">/etc/update-motd.d/50-motd-news</font><font color="#2AA1B3">:</font>		https://motd.<font color="#C01C28"><b>ubuntu</b></font>.com)
+<font color="#A347BA">/etc/logrotate.d/ubuntu-advantage-tools</font><font color="#2AA1B3">:</font># of /var/log/<font color="#C01C28"><b>ubuntu</b></font>-advantage*.log files.
+<font color="#A347BA">/etc/logrotate.d/ubuntu-advantage-tools</font><font color="#2AA1B3">:</font>/var/log/<font color="#C01C28"><b>ubuntu</b></font>-advantage*.log {
+<font color="#A347BA">/etc/sysctl.d/10-ptrace.conf</font><font color="#2AA1B3">:</font># https://wiki.<font color="#C01C28"><b>ubuntu</b></font>.com/SecurityTeam/Roadmap/KernelHardening#ptrace
+grep: /etc/polkit-1/localauthority: Permission denied
+<font color="#A347BA">/etc/update-manager/meta-release</font><font color="#2AA1B3">:</font>URI = https://changelogs.<font color="#C01C28"><b>ubuntu</b></font>.com/meta-release
+<font color="#A347BA">/etc/update-manager/meta-release</font><font color="#2AA1B3">:</font>URI_LTS = https://changelogs.<font color="#C01C28"><b>ubuntu</b></font>.com/meta-release-lts
+<font color="#A347BA">/etc/update-manager/release-upgrades.d/ubuntu-advantage-upgrades.cfg</font><font color="#2AA1B3">:</font>PostInstallScripts=./xorg_fix_proprietary.py, /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/upgrade_lts_contract.py
+grep: /etc/sudoers.d/README: Permission denied
+grep: /etc/NetworkManager/system-connections/AndroidAP148E.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/SEC EEE 5F WIFI.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/vivo Y73.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/Galaxy M0101ea.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/PCB Design Lab.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/Test.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/J7 prime.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/ECE 3F IW LH1.nmconnection: Permission denied
+grep: /etc/NetworkManager/system-connections/vivo V29e.nmconnection: Permission denied
+grep: /etc/ld.so.cache: binary file matches
+grep: /etc/ufw/before.init: Permission denied
+grep: /etc/ufw/before.rules: Permission denied
+grep: /etc/ufw/before6.rules: Permission denied
+grep: /etc/ufw/after.init: Permission denied
+grep: /etc/ufw/user6.rules: Permission denied
+grep: /etc/ufw/after6.rules: Permission denied
+grep: /etc/ufw/after.rules: Permission denied
+grep: /etc/ufw/user.rules: Permission denied
+grep: /etc/shadow: Permission denied
+grep: /etc/pulse/client.conf.d/01-enable-autospawn.conf: No such file or directory
+<font color="#A347BA">/etc/depmod.d/ubuntu.conf</font><font color="#2AA1B3">:</font>search updates <font color="#C01C28"><b>ubuntu</b></font> built-in
+grep: /etc/brlapi.key: Permission denied
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;dma_buf_te&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;galcore&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;mali[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;nvhost-*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;nvmap&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;pvr_sync&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;renderD[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;tegra_dc_[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;tegra_dc_ctrl&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;vchiq&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;vcsm-cma&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>SUBSYSTEM==&quot;dma_heap&quot;, KERNEL==&quot;linux,cma&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>SUBSYSTEM==&quot;dma_heap&quot;, KERNEL==&quot;system&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>SUBSYSTEM==&quot;drm&quot;, KERNEL==&quot;card[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>TAG==&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software&quot;, SUBSYSTEM!=&quot;module&quot;, SUBSYSTEM!=&quot;subsystem&quot;, RUN+=&quot;/usr/lib/snapd/snap-device-helper $env{ACTION} snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software $devpath $major:$minor&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;dma_buf_te&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;galcore&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;mali[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;nvhost-*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;nvmap&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;pvr_sync&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;renderD[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;tegra_dc_[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;tegra_dc_ctrl&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;vchiq&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>KERNEL==&quot;vcsm-cma&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>SUBSYSTEM==&quot;dma_heap&quot;, KERNEL==&quot;linux,cma&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>SUBSYSTEM==&quot;dma_heap&quot;, KERNEL==&quot;system&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>SUBSYSTEM==&quot;drm&quot;, KERNEL==&quot;card[0-9]*&quot;, TAG+=&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;
+<font color="#A347BA">/etc/udev/rules.d/70-snap.snap-store.rules</font><font color="#2AA1B3">:</font>TAG==&quot;snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file&quot;, SUBSYSTEM!=&quot;module&quot;, SUBSYSTEM!=&quot;subsystem&quot;, RUN+=&quot;/usr/lib/snapd/snap-device-helper $env{ACTION} snap_snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file $devpath $major:$minor&quot;
+<font color="#A347BA">/etc/appstream.conf</font><font color="#2AA1B3">:</font>[<font color="#C01C28"><b>ubuntu</b></font>]
+<font color="#A347BA">/etc/appstream.conf</font><font color="#2AA1B3">:</font>ScreenshotUrl=http://screenshots.<font color="#C01C28"><b>ubuntu</b></font>.com
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>      https://<font color="#C01C28"><b>ubuntu</b></font>.com/security/certifications/docs/usg
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>      https://<font color="#C01C28"><b>ubuntu</b></font>.com/security/esm
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>     the service at https://<font color="#C01C28"><b>ubuntu</b></font>.com/security/esm
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>      https://<font color="#C01C28"><b>ubuntu</b></font>.com/security/certifications#fips
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>      You can find out more at https://<font color="#C01C28"><b>ubuntu</b></font>.com/security/certifications#fips.
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>      https://<font color="#C01C28"><b>ubuntu</b></font>.com/security/livepatch
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>    ROS ESM service at https://<font color="#C01C28"><b>ubuntu</b></font>.com/robotics/ros-esm
+<font color="#A347BA">/etc/ubuntu-advantage/help_data.yaml</font><font color="#2AA1B3">:</font>    https://<font color="#C01C28"><b>ubuntu</b></font>.com/robotics/ros-esm
+<font color="#A347BA">/etc/gdm3/config-error-dialog.sh</font><font color="#2AA1B3">:</font># Author: Gunnar Hjalmarsson &lt;gunnarhj@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>application/vnd.debian.binary-package=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>application/vnd.ms-cab-compressed=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>application/x-cab=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>application/x-ms-cab-compressed=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>application/x-deb=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>application/x-debian-package=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software-local-file.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>text/x-c++hdr=<font color="#C01C28"><b>ubuntu</b></font>sdk.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>text/x-c++src=<font color="#C01C28"><b>ubuntu</b></font>sdk.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>text/x-xsrc=<font color="#C01C28"><b>ubuntu</b></font>sdk.desktop
+<font color="#A347BA">/etc/gnome/defaults.list</font><font color="#2AA1B3">:</font>x-scheme-handler/snap=snap-store_<font color="#C01C28"><b>ubuntu</b></font>-software.desktop
+grep: /etc/cups/ssl: Permission denied
+grep: /etc/cups/subscriptions.conf.O: Permission denied
+grep: /etc/cups/printers.conf.O: Permission denied
+grep: /etc/cups/printers.conf: Permission denied
+grep: /etc/cups/subscriptions.conf: Permission denied
+grep: /etc/.pwd.lock: Permission denied
+<font color="#A347BA">/etc/os-release</font><font color="#2AA1B3">:</font>ID=<font color="#C01C28"><b>ubuntu</b></font>
+<font color="#A347BA">/etc/os-release</font><font color="#2AA1B3">:</font>HOME_URL=&quot;https://www.<font color="#C01C28"><b>ubuntu</b></font>.com/&quot;
+<font color="#A347BA">/etc/os-release</font><font color="#2AA1B3">:</font>SUPPORT_URL=&quot;https://help.<font color="#C01C28"><b>ubuntu</b></font>.com/&quot;
+<font color="#A347BA">/etc/os-release</font><font color="#2AA1B3">:</font>BUG_REPORT_URL=&quot;https://bugs.launchpad.net/<font color="#C01C28"><b>ubuntu</b></font>/&quot;
+<font color="#A347BA">/etc/os-release</font><font color="#2AA1B3">:</font>PRIVACY_POLICY_URL=&quot;https://www.<font color="#C01C28"><b>ubuntu</b></font>.com/legal/terms-and-policies/privacy-policy&quot;
+<font color="#A347BA">/etc/dpkg/origins/ubuntu</font><font color="#2AA1B3">:</font>Vendor-URL: http://www.<font color="#C01C28"><b>ubuntu</b></font>.com/
+<font color="#A347BA">/etc/dpkg/origins/ubuntu</font><font color="#2AA1B3">:</font>Bugs: https://bugs.launchpad.net/<font color="#C01C28"><b>ubuntu</b></font>/+filebug
+<font color="#A347BA">/etc/dpkg/origins/default</font><font color="#2AA1B3">:</font>Vendor-URL: http://www.<font color="#C01C28"><b>ubuntu</b></font>.com/
+<font color="#A347BA">/etc/dpkg/origins/default</font><font color="#2AA1B3">:</font>Bugs: https://bugs.launchpad.net/<font color="#C01C28"><b>ubuntu</b></font>/+filebug
+<font color="#A347BA">/etc/rc5.d/S01acpid</font><font color="#2AA1B3">:</font>        MODULES=&quot;$(sed -rn &apos;s#^(/lib/modules/[^/]+/)?kernel/(drivers|<font color="#C01C28"><b>ubuntu</b></font>)/acpi/([^/]+/)*(.*)\.ko:.*#\4#p&apos; &quot;/lib/modules/$(uname -r)/modules.dep&quot;)&quot;
+<font color="#A347BA">/etc/rc5.d/S01whoopsie</font><font color="#2AA1B3">:</font>DAEMON=/bin/sh -c &apos;export CRASH_DB_URL=https://daisy.<font color="#C01C28"><b>ubuntu</b></font>.com; exec whoopsie -f&apos;
+<font color="#A347BA">/etc/systemd/system/timers.target.wants/ua-timer.timer</font><font color="#2AA1B3">:</font>ConditionPathExists=/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/private/machine-token.json
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service</font><font color="#2AA1B3">:</font>ConditionPathExists=/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/marker-reboot-cmds-required
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service</font><font color="#2AA1B3">:</font>ConditionPathExists=/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/private/machine-token.json
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service</font><font color="#2AA1B3">:</font>ExecStart=/usr/bin/python3 /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/reboot_cmds.py
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font># sudo systemctl stop <font color="#C01C28"><b>ubuntu</b></font>-advantage.service
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font># sudo systemctl disable <font color="#C01C28"><b>ubuntu</b></font>-advantage.service
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font>Documentation=man:<font color="#C01C28"><b>ubuntu</b></font>-advantage https://<font color="#C01C28"><b>ubuntu</b></font>.com/advantage
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font>After=network.target network-online.target systemd-networkd.service ua-auto-attach.service cloud-config.service <font color="#C01C28"><b>ubuntu</b></font>-advantage-cloud-id-shim.service
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font>ConditionPathExists=!/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/private/machine-token.json
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font>ConditionPathExists=|/run/<font color="#C01C28"><b>ubuntu</b></font>-advantage/flags/auto-attach-failed
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font>ExecStart=/usr/bin/python3 /usr/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/daemon.py
+<font color="#A347BA">/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service</font><font color="#2AA1B3">:</font>WorkingDirectory=/var/lib/<font color="#C01C28"><b>ubuntu</b></font>-advantage/
+<font color="#A347BA">/etc/systemd/user/default.target.wants/ubuntu-report.path</font><font color="#2AA1B3">:</font>PathExists=%h/.cache/<font color="#C01C28"><b>ubuntu</b></font>-report/pending
+<font color="#A347BA">/etc/systemd/timesyncd.conf</font><font color="#2AA1B3">:</font>#FallbackNTP=ntp.<font color="#C01C28"><b>ubuntu</b></font>.com
+<font color="#A347BA">/etc/profile.d/cedilla-portuguese.sh</font><font color="#2AA1B3">:</font># Author: Gunnar Hjalmarsson &lt;gunnarhj@<font color="#C01C28"><b>ubuntu</b></font>.com&gt;
+grep: /etc/profile.d/debuginfod.sh: Permission denied
+grep: /etc/profile.d/debuginfod.csh: Permission denied
+grep: /etc/gshadow-: Permission denied
+grep: /etc/alternatives/cpp: binary file matches
+grep: /etc/alternatives/rsh: binary file matches
+grep: /etc/alternatives/rlogin: binary file matches
+grep: /etc/alternatives/shimx64.efi.signed: binary file matches
+<font color="#A347BA">/etc/alternatives/open</font><font color="#2AA1B3">:</font>         LXDE|L<font color="#C01C28"><b>ubuntu</b></font>)
+grep: /etc/alternatives/netcat: binary file matches
+<font color="#A347BA">/etc/alternatives/text.plymouth</font><font color="#2AA1B3">:</font>Description=Text mode theme based on <font color="#C01C28"><b>ubuntu</b></font>-logo theme
+<font color="#A347BA">/etc/alternatives/text.plymouth</font><font color="#2AA1B3">:</font>ModuleName=<font color="#C01C28"><b>ubuntu</b></font>-text
+<font color="#A347BA">/etc/alternatives/text.plymouth</font><font color="#2AA1B3">:</font>[<font color="#C01C28"><b>ubuntu</b></font>-text]
+grep: /etc/alternatives/gdm-theme.gresource: binary file matches
+grep: /etc/alternatives/nc: binary file matches
+</pre>
 
 
 grep -w -n world newfile   
 ## OUTPUT
-
+<pre><font color="#26A269">1</font><font color="#2AA1B3">:</font>Hello <font color="#C01C28"><b>world</b></font>
+<font color="#26A269">2</font><font color="#2AA1B3">:</font>hello <font color="#C01C28"><b>world</b></font>
+</pre>
 
 cat < newfile 
 ```
