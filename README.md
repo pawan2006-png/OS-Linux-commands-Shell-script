@@ -560,60 +560,86 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>Hello</b></font> world
+<font color="#C01C28"><b>hello</b></font> world
+</pre>
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>Hello</b></font> world
+<font color="#C01C28"><b>hello</b></font> world
+</pre>
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>Hello</b></font> world
+<font color="#C01C28"><b>hello</b></font> world
+</pre>
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>hello</b></font> world
+</pre>
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+<pre>Hello <font color="#C01C28"><b>world</b></font>
+hello <font color="#C01C28"><b>world</b></font>
+Linux is best in this <font color="#C01C28"><b>world</b></font>
+</pre>
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+<pre>Hello <font color="#C01C28"><b>world</b></font>
+hello <font color="#C01C28"><b>world</b></font>
+Linux is best in this <font color="#C01C28"><b>world</b></font>
+</pre>
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+<pre>Hello <font color="#C01C28"><b>world</b></font>
+hello <font color="#C01C28"><b>world</b></font>
+Linux is best in this <font color="#C01C28"><b>world</b></font>
+</pre>
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+<pre>Linux is world number <font color="#C01C28"><b>1</b></font>
+</pre>
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>Linux is world</b></font> number 1
+<font color="#C01C28"><b>Linux is best in this world</b></font>
+</pre>
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+<pre><font color="#C01C28"><b>Linux is world</b></font> number 1
+<font color="#C01C28"><b>Linux is best in this world</b></font>
+</pre>
 
 egrep l{2} newfile
 ## OUTPUT
-
+<pre>He<font color="#C01C28"><b>ll</b></font>o world
+he<font color="#C01C28"><b>ll</b></font>o world
+</pre>
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+<pre>Linux i<font color="#C01C28"><b>s</b></font> world number 1
+Unix i<font color="#C01C28"><b>s</b></font> predece<font color="#C01C28"><b>ss</b></font>or
+Linux i<font color="#C01C28"><b>s</b></font> be<font color="#C01C28"><b>s</b></font>t in thi<font color="#C01C28"><b>s</b></font> world
+</pre>
 
 cat > file23
 ```
