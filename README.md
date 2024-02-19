@@ -981,8 +981,10 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
- 
+```
+#!/bin/sh
+echo Hello World
+```
 cat << stop > herecheck.txt
 ```
 hello in this world
