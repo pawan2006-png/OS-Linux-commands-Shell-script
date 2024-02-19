@@ -687,6 +687,8 @@ sed -n -e '$p' file23
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
+```
+
 1001 | Sita | 10000 | HR
 1001 | Sita | 10000 | HR
 1002 | tom |  5000 | Admin
@@ -695,11 +697,13 @@ sed  -e 's/Ram/Sita/' file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Sita | 10000 | HR
-
+```
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR
 1001 | Sita | 10000 | HR
 1002 | tom |  5000 | Admin
@@ -708,11 +712,13 @@ sed  -e '2s/Ram/Sita/' file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
-
+```
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR
 1001 | Ram | 10000 | HR
 1002 | tom |  6000 | Admin
@@ -721,37 +727,45 @@ sed  '/tom/s/5000/6000/' file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
-
+```
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 1005 | Sam |  5000 | HR
-
+```
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
-
+```
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
+```
+
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
-
+```
 
 
 seq 10 
 ## OUTPUT
+```
+
 1
 2
 3
@@ -762,62 +776,76 @@ seq 10
 8
 9
 10
-
+```
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
+```
+
 4
 5
 6
-
+```
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
+```
+
 2
 3
 4
-
+```
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
+```
+
 1
 2
 hello
 3
-
+```
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
+```
+
 1
 hello
 2
-
+```
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
+```
+
 1
 hello
 10
-
+```
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
+```
+
 $1001 | Ram | 10000 | HR
 $1002 | tom |  5000 | Admin
 $1003 | Joe |  7000 | Developer
-
+```
 
 
 sed -n '2,4{s/$/*/;p}' file23
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR*
 1002 | tom |  5000 | Admin*
 1003 | Joe |  7000 | Developer*
-
+```
 
 #Sorting File content
 cat > file21
@@ -830,12 +858,14 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 1004 | Sit |  7000 | Dev
 1005 | Sam |  5000 | HR
-
+```
 
 cat > file22
 ```
@@ -848,18 +878,22 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
+```
+
 1001 | Ram | 10000 | HR
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
 1005 | Sam |  5000 | HR
 1004 | Sit |  7000 | Dev
-
+```
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+ ```
+
 1001 | RAM | 10000 | HR
 1001 | RAM | 10000 | HR
 1002 | TOM |  5000 | ADMIN
@@ -868,7 +902,7 @@ cat file23 | tr [:lower:] [:upper:]
 1004 | SIT |  7000 | DEV
 1003 | JOE |  7000 | DEVELOPER
 1001 | RAM | 10000 | HR
-
+```
 cat < urllist.txt
 ```
 www. yahoo. com
@@ -884,18 +918,22 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
+ ```
+
 www.yahoo.com
 www.google.com
 www.mrcet....com
-
+```
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
+```
+
 www.yahoo.com
 www.google.com
 www.mrcet.com
-
+```
 
 
 #Backup commands
